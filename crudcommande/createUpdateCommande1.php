@@ -17,7 +17,7 @@
 	
 
 	if ($action == "CREATE") {
-		createCommande($id, $usersite, $datecommande, $n_commande, $montant, $statut);
+		createCommande($usersite, $datecommande, $n_commande, $montant, $statut);
 
 		echo "commande cree <br>";
 		echo "<a href='index.php'>Liste des Commandes</a>";
@@ -25,7 +25,7 @@
 	}
 	
 	if ($action == "UPDATE") {
-		updateCake($id, $usersite, $datecommande, $n_commande, $montant, $statut );
+		updateCake($usersite, $datecommande, $n_commande, $montant, $statut );
 		echo "commande update <br>";
 		echo "<a href='index.php'>Liste des Commandes</a>";
 	}

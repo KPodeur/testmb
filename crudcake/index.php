@@ -18,6 +18,6 @@
     ?>
     
 
-    <a href=formulaireCake.php>Creer un cake</a> 
+    <a href=formulaireCake.php?id=0>Creer un cake</a> 
     </body>
 </html>

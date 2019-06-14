@@ -29,11 +29,11 @@
 		<input type="hidden" name="action" value="<?php echo $action;  ?>"/>
 		 <div>
         	<label for="name">Nom de l'utilisateur :</label>
-        	<input type="text" id="nomcake" name="nomcake" value="<?php echo $commande['user'];  ?>">
+        	<input type="text" id="usersite" name="usersite" value="<?php echo $commande['usersite'];  ?>">
 	    </div>
 	    <div>
-	        <label for="date">Date :</label>
-	        <input type="date" id="date" name="date" value="<?php echo $commande['date'];  ?>"></input>
+	        <label for="datecommande">Date :</label>
+	        <input type="date" id="datecommande" name="datecommande" value="<?php echo $commande['datecommande'];  ?>"></input>
 	    </div>
 	    <div>
 	        <label for="n_commande">Numéro de commande:</label>

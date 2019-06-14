@@ -1,6 +1,4 @@
 <?php
-	
-		
 function afficherTableau($rows, $headers) {
 		?>
 
@@ -32,8 +30,8 @@ function afficherTableau($rows, $headers) {
 function getHeaderTable() {
 	$headers = array();
 	$headers[] = "id";
-	$headers[] = "user";
-	$headers[] = "date";
+	$headers[] = "usersite";
+	$headers[] = "datecommande";
 	$headers[] = "n_commande";
 	$headers[] = "montant";
 	$headers[] = "statut";

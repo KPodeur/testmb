@@ -11,13 +11,13 @@
    <?php
         include 'mesfonctionssqlcommande.php';
         include 'mesFunctionsTableCommande.php';
-
+        
         $headers = getHeaderTable();
         $commande = getAllCommande();
         afficherTableau($commande, $headers);
     ?>
     
 
-    <a href=formulaireCommande.php>Créer une commande</a> 
+    <a href=formulaireCommande.php?id=0>Créer une commande</a> 
     </body>
 </html>

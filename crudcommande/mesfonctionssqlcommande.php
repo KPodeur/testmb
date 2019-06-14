@@ -4,7 +4,7 @@ try {
 	    $user = "root";
 		$pass = "";
 		$pdo = new PDO('mysql:host=localhost;dbname=mb', $user, $pass);
-		 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		return $pdo;
 		
 	} catch (PDOException $e) {
@@ -22,12 +22,14 @@ function getAllCommande(){
 	return $rows;
 }
 // Créer un cake
-function createCommande($user, $date, $n_commande, $montant, $statut){
+function createCommande($usersite, $datecommande, $n_commande, $montant, $statut){
 	try {
 			$con = getDatabaseConnexion();
-			$sql = "INSERT INTO commande (user, date, n_commande, montant, statut) 
-					VALUES ('$user', '$date', '$n_commande', '$montant', '$statut')";
+			$sql = "INSERT INTO commande (usersite, datecommande, n_commande, montant, statut) 
+                    VALUES ({$usersite}, '{$datecommande}', {$n_commande}, {$montant}, {$statut})";
 	    	$con->exec($sql);
+	    	die($sql);
+
 		}
 	    catch(PDOException $e) {
 	    	echo $sql . "<br>" . $e->getMessage();
@@ -47,12 +49,12 @@ function readCommande($id){
 
 }
 // Mettre à jour Cake
-function updateCommande($id, $user, $date, $n_commande, $montant, $statut){
+function updateCommande($id, $usersite, $datecommande, $n_commande, $montant, $statut){
 	try {
 			$con = getDatabaseConnexion(); //comme connexion
 			$requete = "UPDATE commande set 
-						user = '$user',
-						date = '$date',
+						usersite = '$usersite',
+						datecommande = '$datecommande',
 						n_commande = '$n_commande',
 						montant = '$montant',
 						statut = '$statut',
@@ -81,8 +83,8 @@ try {
 }
 function getNewCommande() {
 		$commande['id'] = "";
-		$commande['user'] = "";
-		$commande['date'] = "";
+		$commande['usersite'] = "";
+		$commande['datecommande'] = "";
 		$commande['n_commande'] = "";
 		$commande['montant'] = "";
 		$commande['statut'] = "";
