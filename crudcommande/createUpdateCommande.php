@@ -8,6 +8,7 @@
 	} else {
 		$id = $_GET["id"];
 		$usersite = $_GET["usersite"];
+		var_dump($_GET["usersite"]);
 		$datecommande = $_GET["datecommande"];
 		$n_commande = $_GET["n_commande"];
 		$montant = $_GET["montant"];
@@ -17,7 +18,7 @@
 	
 
 	if ($action == "CREATE") {
-		createCommande($id, $usersite, $datecommande, $n_commande, $montant, $statut);
+		createCommande($usersite, $datecommande, $n_commande, $montant, $statut);
 
 		echo "commande cree <br>";
 		echo "<a href='index.php'>Liste des Commandes</a>";

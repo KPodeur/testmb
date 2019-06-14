@@ -27,8 +27,10 @@ function createCommande($usersite, $datecommande, $n_commande, $montant, $statut
 			$con = getDatabaseConnexion();
 			$sql = "INSERT INTO commande (usersite, datecommande, n_commande, montant, statut) 
                     VALUES ({$usersite}, '{$datecommande}', {$n_commande}, {$montant}, {$statut})";
+	    	var_dump($usersite);
+	    	die($usersite);
 	    	$con->exec($sql);
-	    	die($sql);
+	    	
 
 		}
 	    catch(PDOException $e) {
