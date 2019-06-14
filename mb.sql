@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  jeu. 13 juin 2019 à 11:15
+-- Généré le :  ven. 14 juin 2019 à 13:23
 -- Version du serveur :  5.7.24
 -- Version de PHP :  7.3.1
 
@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS `cake` (
   `description` varchar(500) NOT NULL,
   `montant` int(5) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `cake`
@@ -54,8 +54,8 @@ INSERT INTO `cake` (`id`, `nomcake`, `description`, `montant`) VALUES
 DROP TABLE IF EXISTS `commande`;
 CREATE TABLE IF NOT EXISTS `commande` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `user` varchar(50) NOT NULL,
-  `date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `usersite` varchar(50) NOT NULL,
+  `datecommande` date NOT NULL,
   `n_commande` int(10) NOT NULL,
   `montant` int(5) NOT NULL,
   `statut` varchar(50) NOT NULL,
